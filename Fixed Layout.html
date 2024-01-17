@@ -1,0 +1,40 @@
+<!-- Una página web del tipo "fixed" tiene un tamaño predeterminado y el usuario no puede cambiar su tamaño. Aunque esto provoca que no haya improvistos dependiendo de su resolución y que ésta siempre se vea como teníamos planeado. Una gran diferencia entre los dos es que en el fixed layout TODO SE GUARDA DENTRO DE UN DIV. A este div se le llama "container div" o "wrapper (envoltorio)". Container div porque contiene TODA LA PÁGINA WEB DEL TIPO FIXED dentro.-->
+
+<!-- La property "max-width" determina el ANCHO DE LA IMAGEN TENIENDO EL CUENTA EL ANCHO DEL CONTENEDOR EN EL ESTÉ METIDO (respetando el tamaño original de la imagen), ya sea en un body (toda la página web), un div, un class, un tag, etc. -->
+
+<!-- La property "max-height" es lo mismo pero con la ALTURA.  -->
+
+<!-- La rule "@media" sirve para APLICAR UNA REGLA A TODA LA PÁGINA WEB A PARTE DE LO ESPECIFICADO DENTRO DEL ARGUMENTO (dentro de los paréntisas que van junto a la rule @media). En este caso, hemos puesto que, si la página web se reduce a un ancho de 600px (el ancho que suelen tener de resolución la mayoría de móviles), la sidebar (la barra pegada a la izquierda de esta página) desaparecerá. También, si hacemos eso, el logo de left4dead aparecerá a la izquierda de la página. Hay que tener en cuenta la rule @media PREDOMINA SOBRE EL HERITAGE. Es decir, ESTA RULE TIENE PREFERENCIA FRENTE AL ORDER DEL CÓDIGO. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="Fixed Layout.css">
+</head>
+
+<body>
+	<div id="container">
+
+		<div class="header">
+			<img class="left4dead" src="left-4-dead-logo.jpg" alt="">
+		</div>
+
+		<div id="nav">
+		</div>
+
+		<div class="sidebar">
+		</div>
+
+		<div class="main">
+			<div id="minimain">
+				<p class="recuadro">
+				<a target="_blank" href="Flexible Layout.html">
+					<img src="cyrodiil-recortada2.jpeg" alt="">
+				</a>
+				<p>Esta historia trata sobre Herman Stodrof. Las demás historias están archivos por el momento hasta que estén terminadas.</p>
+			</div>
+		</div>
+	</div>
+		
+</body>
+</html>

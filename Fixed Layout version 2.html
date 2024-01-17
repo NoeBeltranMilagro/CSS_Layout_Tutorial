@@ -1,0 +1,37 @@
+<!-- Utilizar la property "media" dentro del tag link nos permite enlazar distintos estilos de CSS creados por nosotros dependiendo de, en este caso, la anchura de la pantalla del usuario. -->
+
+<!-- El atributo "media" es un medio para "sobreescribir" la página web. Es decir, que todo lo que no se especifique en éste será rellenado por el estilo original. Por ejemplo, si no hemos especificado un tipo de texto en "media" pero sí en el estilo original, éste último le pondrá su tipo de texto. Así con todo. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="Fixed Layout version 2.css">
+    <link type="text/css" rel="stylesheet" media="(max-width: 400px)" href="Fixed Layout version 2.css">
+</head>
+
+<body>
+	<div id="container">
+
+		<div class="header">
+			<img class="left4dead" src="left-4-dead-logo.jpg" alt="">
+		</div>
+
+		<div id="nav">
+		</div>
+
+		<div class="sidebar">
+		</div>
+
+		<div class="main">
+			<div id="minimain">
+				<p class="recuadro">
+				<a target="_blank" href="Flexible Layout.html">
+					<img src="cyrodiil-recortada2.jpeg" alt="">
+				</a>
+				<p>Esta historia trata sobre Herman Stodrof. Las demás historias están archivos por el momento hasta que estén terminadas.</p>
+			</div>
+		</div>
+	</div>
+		
+</body>
+</html>

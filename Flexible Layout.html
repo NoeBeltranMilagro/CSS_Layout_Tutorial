@@ -1,0 +1,200 @@
+<!-- Una página web tipo "flexible" se ajusta al tamaño de la resolución en la que el usuario esté viendo la página web. Aunque esto podría provocar que la página web no se vea de la forma que el creador de la página web quería que se viera. -->
+<!-- En este ejemplo, en el apartado "main", no hemos definido un height o un width, ya que esto provocaría que cada vez que introdujéramos algo nuevo en el main tendríamos que reajustar el recuadro, poniendo más height y width. El propio navegador se encarga de reajustar el recuadro cada vez que introduzcamos algo nuevo en él, como se puede ver en este ejemplo. -->
+<!-- La property "transition" nos permite ajustar los tiempos de transición, como en este caso, en el que hacemos que el efecto de opacidad al pasar el ratón por la imagen ocurra 0.2 segundos después de pasarlo por encima. -->
+<!-- El /* y */ sirven para OCULTAR LO QUE ESTÉ ENTRE ELLOS. De esta forma, podemos escribir un código que no vayamos a emplear en la página, para organizar el código en títulos y apartados, etc.-->
+<!-- Los comentarios SOLO SE PUEDEN PONER DENTRO DEL APARTADO CSS (el style). FUERA DE ÉSTE NO SE PUEDE (por ejemplo, dentro del body). -->
+<!-- Poner la property list-style-type en "none" elimina los puntos de una unorganized list (una lista con puntitos). -->
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	/* =========== APARTADO CSS =========== */
+		body {
+		background-color: #9c9f84;
+		margin: 10px;
+		font-family: Verdana, Georgia, serif;
+		
+	    font-size: 16px; /* Este tamaño de fuente me lo puedo guardar por si lo quiero utilizar en otro momento. Así me ahorro el tener que poner la property cada que quiera cambiar a una fuente de dieciséis píxeles, en este caso. */
+	}
+	
+		#header {
+		background-color: #5c755e;
+		margin: 10px;
+		height: 90px;
+		border-radius: 5px;
+		color: brown;
+	}
+
+		#navbar ul {
+		background-color: #000;
+		padding: 5px;
+		list-style-type: none;
+		text-align: center;
+		margin: 10px;
+		border-radius: 5px;
+	}
+
+		#navbar ul li {
+		display: inline;
+	}
+
+		#navbar ul li a {
+		text-decoration: none;
+		font-family: Arial;
+		padding: .2em 1em;
+		color: #fff;
+		background-color: #000;	
+	}
+
+		#navbar ul li a:hover {
+		color: #000;
+		background-color: #fff;
+	}
+
+		.main {
+			background-color: #e5e4d7;
+			margin: 10px;
+			margin-left: 10px;
+			margin-right: 320px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			padding: 20px;
+			font-size: 110%;
+	}
+		
+		h2 {
+			font-size: 120%;
+			color: skyblue;
+	}
+
+		h3 {
+			font-size: 250%;
+			text-align: center;
+			color: #e5e4d7;
+			font-family: "Century Gothic", "Gill Sans", Arial, sans serif;
+			margin: 0px;
+			
+			/* Estas últimas rules de h3 se pueden reutilizar para que ajusten a nuestro gusto el texto indidcado, INDEPENDIENTEMENTE DE SU POSICIÓN. */
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+	}
+
+	.sideright {
+		background-color: #e5e4d9;
+		font-size: 105%;
+		padding: 20px;
+		width: 260px;
+		float: right;
+		border-radius: 5px;
+		margin-left: 10px; margin-right: 10px;
+		margin-top: 0px; margin-bottom: 10px;
+		clear: right;
+	}
+
+	.title1 {
+		font-size: 120%;
+		color: rgb(101,63,33);
+	}
+
+	.imagesidebar {
+		padding: 20px;
+		width: 300px;
+		float: right;
+		border-radius: 5px;
+		margin-left: 10px; margin-right: 10px;
+		margin-top: 0px; margin-bottom: 10px;
+		clear: right;
+		opacity: 1.0;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.imagesidebar:hover {
+		opacity: 0.4;
+	}
+
+	#footer {
+		background-color: #5c755e;
+		margin: 20px;
+		height: 60px;
+		clear: both;
+		border-radius: 5px;
+		color: #efe5d0;
+		text-align: center;
+		padding: 15px;
+		font-size: 90%;
+	}
+
+	#footer ul {
+		padding: 5px;
+		list-style-type: none;
+		text-align: center;
+		margin: 10px;
+		border-radius: 5px;
+	}
+
+		#footer ul li {
+		display: inline;
+	}
+
+		#footer ul li a {
+		text-decoration: none;
+		font-family: Arial;
+		padding: .2em 1em;
+		color: #efe5d0;
+		background-color: #5c755e;	
+	}
+
+		#footer ul li a:hover {
+		color: #000;
+		background-color: #fff;
+	}
+
+	</style>
+</head>
+
+<body>
+	
+	<div id="header">
+		<h3>fantasystories.com</h3>
+	</div>
+
+	<div id="navbar">
+		<ul>
+			<li><a href="">Orígenes</a></li>
+			<li><a href="">Personajes</a></li>
+			<li><a href="">Mundo</a></li>
+		</ul>
+	</div>
+
+	<div class="sideright">
+		<h2>Índice</h2>
+	</div>
+
+	<div class="main">
+		<h1 class="title1">Una larga historia</h1>
+		<p>Esta es la historia de Herman Stodrof, un muchacho proveniente de una pequeña aldea llamada Cierzo, rica en sal, pescado, olor a mar y una serie de tradiciones más que polémicas. El muchacho tenía quince años. Éste era un chico robusto pero con rasgos afilados. tenía la tez blanca como el granito y unos largos cabellos dorados. Era hijo de uno de los hombres más prominentes de la aldea, Orlen Stodrof, más conocido como el "Caballero Errante".</p>
+		
+		<p>Un día, toda su apacible vida cambió por completo. Su mejor amigo, Herslok, fue exiliado debido a una ley muy presente en la región de Quersoneso desde tiempos inmemoriales; la Deuda de Sangre.</p>
+	</div>
+
+	<div>
+		<img class="imagesidebar" src="cyrodiil-recortada.jpeg">
+	</div> 
+
+	<div id="footer">
+		<ul>
+			<li><a href="">About fantasystories</a></li>
+			<li><a href="">Careers</a></li>
+			<li><a href="">Help</a></li>
+			<li><a href="">Contact Us</a></li>
+		</ul>
+		&copy 2021 fantasystories.com. All Rights Reserved.
+	</div>
+
+
+</body>
+</html>

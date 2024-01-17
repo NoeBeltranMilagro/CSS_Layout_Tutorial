@@ -1,0 +1,39 @@
+<!-- Para crear una página web, deberíamos empezar por el cabezal con su respectiva barra de navegación (header y navbar en este caso). -->
+<!-- Si nos fijamos en el ejemplo, se crea un margen entre el cabezal y la barra de navegación AUTOMÁTICAMENTE, INDEPENDIENTEMENTE DEL MARGEN QUE FIJEMOS. A este margen que el navegador pone entre elementos se le llama "gutter". Para eliminarlo, podemos, simplemente, poner los márgenes de ambos elementos a cero. -->
+<!-- El gutter no se suele eliminar, ya que suele quedar bien estéticamente y nos ahorra trabajo de ajustar márgenes. -->
+<!-- La property "border-radius" sirve para redondear los bordes. No es algo obligatorio a poner en una página web, así que se pone o no dependiendo del gusto del diseñador. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+		background-color: #9c9f84;
+		margin: 10px;
+		font-family: Verdana, Georgia, serif;
+		font-size: 14px;
+	}
+	
+	#header {
+		background-color: #5c755e;
+		margin: 10px;
+		height: 90px;
+		border-radius: 5px;
+	}
+
+	#navbar {
+		background-color: #5c755e;
+		margin: 10px;
+		height: 35px;
+		border-radius: 5px;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+	</div>
+
+	<div id="navbar">
+	</div>
+</body>
+</html>
